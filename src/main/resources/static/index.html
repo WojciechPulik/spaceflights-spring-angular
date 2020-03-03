@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html data-ng-app="app">
+<head>
+	<meta charset="UTF-8">
+	<title>Space Flights</title>
+</head>
+<body>
+	<div style="text-align: center"><img src="partials/pic1.jpg" alt="Banner"></div>
+	<div style="text-align: center"><h1 style="color: purple">Space Flights!</h1></div>
+	
+
+	<a href="#!flightlist"><span style="color: purple">Homepage</span></a><br>
+	<a href="#!newtourist"><span style="color: green">Add New Tourist</span></a><br>
+	<a href="#!newflight"><span style="color: purple">Add New Flight</span></a><br>
+	<a href="#!flightlist"><span style="color: green">List of Flights</span></a><br>
+	<a href="#!touristlist"><span style="color: purple">List of Tourist</span></a><br>
+	
+	<div ng-view></div>
+	
+	<script type="text/javascript" src="bower_components/angular/angular.js"></script>
+	<script type="text/javascript" src="bower_components/angular-route/angular-route.js"></script>
+	<script type="text/javascript" src="bower_components/angular-resource/angular-resource.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

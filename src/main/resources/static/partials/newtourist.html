@@ -1,0 +1,13 @@
+<h1 style="color: purple">Add new tourist:</h1>
+<form>
+	<input type = "text" placeholder="First Name" ng-model="tNewCtrl.tourist.firstName"><br />
+	<input type = "text" placeholder="Last Name" ng-model="tNewCtrl.tourist.lastName"><br />
+	<input type = "text" placeholder="Country" ng-model="tNewCtrl.tourist.country"><br />
+	<input type = "text" placeholder="Note" ng-model="tNewCtrl.tourist.note"><br />
+	<input type = "text" placeholder="Date of Birth" ng-model="tNewCtrl.tourist.dateOfBirth"><br />
+	<h3>Gender: <select name="Gender" ng-model="tNewCtrl.tourist.gender">
+		<option>FEMALE</option>
+		<option>MALE</option>
+	</select></h3><br/>
+	<button ng-click="tNewCtrl.saveTourist()">Add tourist</button>
+</form>

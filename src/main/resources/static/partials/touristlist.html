@@ -1,0 +1,7 @@
+<h1 style="color: purple">List of all tourists</h1>
+<ul>
+	<li ng-repeat="t in tListCtrl.tourists">
+		<a ng-href="#!touristdetails/{{t.id}}">{{t.id}} - {{t.firstName}} - {{t.lastName}} - {{t.gender}} - 
+		{{t.country}} - {{t.note}} - {{t.dateOfBirth}}</a>
+	</li>
+</ul>

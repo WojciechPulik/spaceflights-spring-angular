@@ -1,0 +1,8 @@
+<h1 style="color: purple">Add new flight:</h1>
+<form>
+	<input type = "text" placeholder="Departure Date" ng-model="fNewCtrl.flight.departureDate"><br />
+	<input type = "text" placeholder="Arrival Date" ng-model="fNewCtrl.flight.arrivalDate"><br />
+	<input type = "text" placeholder="Number of Seats" ng-model="fNewCtrl.flight.seatsNumber"><br />
+	<input type = "text" placeholder="Price" ng-model="fNewCtrl.flight.price"><br />
+	<button ng-click="fNewCtrl.saveFlight()">Add Flight!</button>
+</form>

@@ -1,0 +1,10 @@
+<h1 style="color: purple">List of all flights</h1>
+<ul>
+	<li ng-repeat="f in fListCtrl.flights">
+		<a ng-href="#!flightdetails/{{f.id}}">{{f.id}} - 
+		Departure: <span style="color: green">{{f.departureDate}}</span> - 
+		Arrival: <span style="color: green">{{f.arrivalDate}}</span> - 
+		Number of Seats: <span style="color: green">{{f.seatsNumber}}</span> - 
+		Price: <span style="color: green">{{f.price}}</span> euro</a>
+	</li>
+</ul>
