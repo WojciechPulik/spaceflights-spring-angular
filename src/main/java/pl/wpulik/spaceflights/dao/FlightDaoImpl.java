@@ -20,6 +20,8 @@ public class FlightDaoImpl implements FlightDao {
 	@PersistenceContext
 	private EntityManager entityManager;
 	
+
+	
 	@Override
 	@Transactional
 	public void addTouristToFlight(Long flightId, Tourist tourist) {

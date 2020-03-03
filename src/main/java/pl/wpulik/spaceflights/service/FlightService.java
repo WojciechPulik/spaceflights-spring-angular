@@ -13,11 +13,15 @@ import pl.wpulik.spaceflights.model.Tourist;
 @Service
 public class FlightService {
 	
-	@Autowired
+	
 	private FlightDaoImpl flightDaoImpl;
-	@Autowired
 	private TouristDaoImpl touristDaoImpl;
 	
+	@Autowired
+	public FlightService(FlightDaoImpl flightDaoImpl, TouristDaoImpl touristDaoImpl) {
+		this.flightDaoImpl = flightDaoImpl;
+		this.touristDaoImpl = touristDaoImpl;
+	}
 	
 	public Flight getFlight(Long flightId) {
 		Flight resultFlight = flightDaoImpl.get(flightId);
