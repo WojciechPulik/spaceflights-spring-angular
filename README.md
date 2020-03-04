@@ -1,5 +1,5 @@
 # spaceflights-spring-angular
- Exercise app (not finished - not all features added yet).
+ Exercise app (not finished - not all features in front-end added yet).
  Appplication with relational database (Many to Many), with tourists and flights.
  
  
