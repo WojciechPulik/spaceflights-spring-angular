@@ -33,6 +33,11 @@ angular.module('app', ['ngRoute', 'ngResource'])
 		controller: 'FlightNewController',
 		controllerAs: 'fNewCtrl'
 	})
+	.when('/touristtoflight', {
+		templateUrl: 'partials/touristtoflight.html',
+		controller: 'TouristToFlightController',
+		controllerAs: 'tToFlightCtrl'
+	})
 	.otherwise({
 		redirectTo: '/flightlist'
 	});
@@ -44,6 +49,15 @@ angular.module('app', ['ngRoute', 'ngResource'])
 .constant('FLIGHT_ENDPOINT', 'api/flights/:id')
 .factory('Flight', function($resource, FLIGHT_ENDPOINT) {
 	return $resource(FLIGHT_ENDPOINT);
+})
+.constant('TOURIST_TO_FLIGTH_ENDPOINT', 'api/flights/toflight/:touristId/:flightId')
+.factory('TouristToFlight', function($resource, TOURIST_TO_FLIGTH_ENDPOINT) {
+	return $resource(TOURIST_TO_FLIGTH_ENDPOINT);
+})
+.service('TouristToFlights', function(TouristToFlight){
+	this.add = function(touristToFlight){
+		touristToFlight.$save();
+	}
 })
 .service('Tourists', function(Tourist) {
 	this.getAll = function() {
@@ -100,4 +114,20 @@ angular.module('app', ['ngRoute', 'ngResource'])
 		Flights.add(vm.flight);
 		vm.flight = new Flight();
 	}
+})
+.controller('TouristToFlightController', function(TouristToFlights, TouristToFlight){	
+	var vm = this;
+	vm.touristToFlight = new TouristToFlight();
+	vm.saveTouristToFlight = function(){
+		TouristToFlights.add(vm.touristToFlight);
+		vm.touristToFlight = new TouristToFlight();
+	}
 });
+
+
+
+
+
+
+
+
